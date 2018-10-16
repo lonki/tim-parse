@@ -1,0 +1,21 @@
+{
+  "name": "tim-parse",
+  "version": "1.0.0",
+  "description": "A simple plugin system for parse xml",
+  "main": "index.start.js",
+  "repository": "git@github.com:lonki/tim-parse.git",
+  "author": "Tim.Hsueh <snow76719@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bluebird": "^3.5.2",
+    "commander": "^2.19.0"
+  },
+  "bin": {
+    "tim-parse": "index.start.js"
+  }
+}

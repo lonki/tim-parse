@@ -1,0 +1,5 @@
+# Directories #
+node_modules/
+
+# VS Code Files #
+jsconfig.json
