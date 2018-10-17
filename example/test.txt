@@ -1,0 +1,1 @@
+There are 22 <a> tag without rel attribute,This HTML without <title> tag,The <meta> tag without name attribute of keywords,Less than 15 <strong> tag,Less than 20 <strong> tag

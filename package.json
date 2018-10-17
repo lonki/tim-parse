@@ -13,7 +13,9 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "bluebird": "^3.5.2",
-    "commander": "^2.19.0"
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.19.0",
+    "request": "^2.88.0"
   },
   "bin": {
     "tim-parse": "index.start.js"

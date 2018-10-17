@@ -5,25 +5,32 @@
  */
 
 import program from 'commander';
+import Core from './Libs/core';
 
 program
   .version('1.0.0')
-  .description('An application for pizzas ordering')
-  .option('-p, --peppers', 'Add peppers')
-  .option('-P, --pineapple', 'Add pineapple')
-  .option('-b, --bbq', 'Add bbq sauce')
-  .option('-c, --cheese <type>', 'Add the specified type of cheese [marble]')
-  .option('-C, --no-cheese', 'You do not want any cheese')
-  .parse(process.argv);
+  .command('parse <url> <path>')
+  .action((url, path) => {
+    new Core({
+      url,
+      hideRules: [3],
+      customRules: [
+        {
+          selector: 'strong',
+          checker: (selector) => [selector.length < 20, 20],
+          output: 'Less than {0} <strong> tag',
+        }
+      ],
+      saveFilePath: path,
+      onParseEnd: (result) => {
+        result.forEach((row) => {
+          console.log(row);
+        });
+      },
+      onParseErr: (err) => {
+        console.log(err);
+      }
+    });
+  });
 
-console.log('you ordered a pizza with:');
-if (program.peppers) console.log('  - peppers');
-if (program.pineapple) console.log('  - pineapple');
-if (program.bbq) console.log('  - bbq');
-
-var cheese = true === program.cheese
-  ? 'marble'
-  : program.cheese || 'no';
-
-console.log('  - %s cheese', cheese);
-console.log(program.args);
+program.parse(process.argv);
