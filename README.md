@@ -19,11 +19,15 @@ Not yet posted to npmjs.org!
 - Local testing command
 
 - Parse 
-- node index.start parse ./example/test.html
-- node index.start parse http://www.dingo.tw/
+```
+node index.start parse ./example/test.html
+node index.start parse http://www.dingo.tw/
+```
 
 - Parse and Write file
-- node index.start parse http://www.dingo.tw/ ./example/test.txt
+```
+node index.start parse http://www.dingo.tw/ ./example/test.txt
+```
 
 - Custom Rules
 ```
@@ -48,4 +52,9 @@ new Core({
     console.log(err);
   }
 });
+```
+
+- Unit Test
+```
+yarn run test
 ```

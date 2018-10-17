@@ -9,7 +9,7 @@ import Core from './Libs/core';
 
 program
   .version('1.0.0')
-  .command('parse <url> <path>')
+  .command('parse <url> [path]')
   .action((url, path) => {
     new Core({
       url,

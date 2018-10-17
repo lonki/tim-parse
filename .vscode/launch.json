@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "啟動程式",
             "program": "${workspaceFolder}/index.start.js",
-            "args": ["parse", "./example/test.html", "/"],
+            "args": ["parse", "./example/test.html", "./example/test.txt"],
         }
     ]
 }
